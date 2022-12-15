@@ -9,9 +9,9 @@ USE PYTHON3
 The program outputs to the console and doesn't take inputs, so running it is fairly simple. Type 'python3 main.py'
 
 You can change the number of customers that come in using the variable defined at line 7 (max_customers)
-
-
+#
 Writeup:
+
 I first started the project by adding functionality of teller and customer. I only had 10 customers and 3 tellers, and the only functionality I added was that the customer is added to a queue and the teller takes the customer from the queue. Then the teller sleeps for a random amount of time and the transaction is done. Then I added in the functionality of the customer choosing a transaction, and conveying it to the teller. Then I added in the manager and safe semaphores, which was only a couple lines each.
 
 Some problems I faced were when using the print function normally. It sometimes couldn't print the whole line and got cut off by another thread's print function. To solve this, I added in a printlock Lock and created a bankprint() function which uses the threading module to lock and ensure that the function is run to completion before releasing the lock.
